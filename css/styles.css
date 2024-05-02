@@ -91,7 +91,6 @@ side .sidebar {
 
 side .sidebar a {
   display: flex;
-  align-items: center;
   justify-content: start;
   color: var(--clr-inactive-link);
   padding-left: 1rem;
@@ -117,6 +116,7 @@ side .sidebar a i {
 side .sidebar .nav-link {
   font-weight: 500;
   display: flex;
+  justify-content: center;
   align-items: center;
   height: 100%;
 }
@@ -160,6 +160,11 @@ main .top {
   justify-content: start;
   align-items: center;
   margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+main .top .menu_bar {
+  display: none;
 }
 
 /* searchbar */
@@ -237,3 +242,111 @@ main .notif-center {
 }
 
 /* MAIN SECTION */
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  /* align-items: center; */
+  margin-left: 1rem;
+  gap: 0.5rem;
+  /* height: 86vh; */
+}
+
+.page-title-container h3 {
+  font-size: 1.4rem;
+}
+.main-content .page-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MEDIA QUERY */
+@media screen and (max-width: 768px) {
+  .page {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .side {
+    position: fixed;
+    width: 18rem;
+    z-index: 3;
+    background-color: var(--clr-white);
+    /* remove later */
+    display: none;
+    left: -100px;
+    animation: menuAnimation 1s forwards ease-in-out;
+  }
+
+  @keyframes menuAnimation {
+    to {
+      left: 0;
+    }
+  }
+
+  .side .logo img {
+    display: inline;
+  }
+
+  .side .sidebar h3 {
+    display: inline;
+  }
+
+  .side .sidebar a {
+    width: 100%;
+    height: 3.4rem;
+  }
+
+  side .sidebar .nav-link {
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  side .top div.close {
+    font-size: 35px;
+    display: inline;
+    position: absolute;
+    right: 0;
+    margin-right: 30px;
+  }
+
+  main .top {
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 0.8rem;
+    width: 100%;
+    z-index: 2;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+
+  main .top .menu_bar {
+    display: inline-block;
+    background: transparent;
+    cursor: pointer;
+    color: #000;
+    position: absolute;
+    left: 1rem;
+    font-size: 2rem;
+  }
+
+  .main-area .top .search-container {
+    display: none;
+  }
+
+  main .notif-center {
+    /* grid-template-columns: repeat(1, 1fr); */
+    /* display: none; */
+  }
+
+  /* .main  */
+  /* https://youtu.be/f51Kd5uHN84?si=-AL7i3AJseSpyj_x */
+}
