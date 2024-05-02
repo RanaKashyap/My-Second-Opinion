@@ -26,6 +26,10 @@
   --box-shadow: 0 2rem 3rem var(--clr-light);
 }
 
+.hidden {
+  opacity: 0; /* Set to fully transparent */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -34,6 +38,7 @@
   border: 0;
   list-style: none;
   appearance: none;
+  transition: opacity 0.3s ease-in-out;
 }
 
 body {
