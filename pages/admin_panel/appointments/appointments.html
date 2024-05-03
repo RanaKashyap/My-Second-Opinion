@@ -19,6 +19,7 @@
       src="https://kit.fontawesome.com/ccfa6e01df.js"
       crossorigin="anonymous"
     ></script>
+    <link href="./appointments.css" rel="stylesheet" />
     <link href="../../../css/styles.css" rel="stylesheet" />
   </head>
   <body>
@@ -116,7 +117,59 @@
             <h3>Appointments</h3>
           </div>
           <div class="page-content">
-            <h1>MAIN</h1>
+            <div class="table-container">
+              <table id="patientTable" class="table">
+                <thead>
+                  <tr>
+                    <th>
+                      <!-- column for profile -->
+                    </th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Mobile</th>
+                    <th>Doctor</th>
+                    <!-- Add more table headings if needed -->
+                  </tr>
+                </thead>
+                <tbody id="tableBody">
+                  <!-- Table rows will be added dynamically here -->
+                </tbody>
+              </table>
+              <div class="pagination">
+                <button id="prevPageBtn" class="btn btn-primary">
+                  <i class="fa-solid fa-angles-left"></i>Previous
+                </button>
+                <button id="nextPageBtn" class="btn btn-primary">
+                  Next <i class="fa-solid fa-angles-right"></i>
+                </button>
+              </div>
+            </div>
+            <!-- ADD ROWS HERE -->
+            <div class="rows" style="display: none">
+              <table>
+                <tr>
+                  <td><button class="patient-info">Ashton Cox</button></td>
+                  <td>test@email.com</td>
+                  <td>Male</td>
+                  <td>02/15/2018</td>
+                  <td>10:18</td>
+                  <td>1234567890</td>
+                  <td><button class="dentist-info">Dr. Rajesh</button></td>
+                </tr>
+                <tr>
+                  <td><button class="patient-info">Airi Satou</button></td>
+                  <td>test@email.com</td>
+                  <td>Female</td>
+                  <td>02/15/2018</td>
+                  <td>10:18</td>
+                  <td>1234567890</td>
+                  <td><button class="dentist-info">Dr. Jay Soni</button></td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </main>
@@ -128,5 +181,6 @@
 
     <!-- Custom Script -->
     <script src="../../../js/scripts.js"></script>
+    <script src="./appointments.js"></script>
   </body>
 </html>

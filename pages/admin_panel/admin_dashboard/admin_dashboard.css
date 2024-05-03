@@ -47,6 +47,7 @@
 .add-records .status-btn {
   background: transparent;
   color: #007a64;
+  padding: 0.3rem;
   text-align: center;
 }
 
@@ -62,6 +63,7 @@
   background: transparent;
   color: #2d28ff;
   text-align: center;
+  padding: 0.3rem;
 }
 
 .patient-info .table .not-submitted {
@@ -76,6 +78,7 @@
   background: transparent;
   color: #ff5c01;
   text-align: center;
+  padding: 0.3rem;
 }
 .patient-info .table .approve-request {
   border: transparent;
@@ -88,6 +91,7 @@
 .approve-request .status-btn {
   background: transparent;
   color: #fff;
+  padding: 0.3rem;
   text-align: center;
 }
 
@@ -160,7 +164,7 @@
   background: transparent;
 }
 
-.left .doctor-link button {
+.left .doctor-link {
   text-decoration: underline;
   background: transparent;
 }
