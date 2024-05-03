@@ -1,0 +1,291 @@
+.page .main-content .divider {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-right: 1rem;
+  align-items: start;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.divider .left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  width: 55%;
+}
+
+.left .section-title {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  padding-left: 0.5rem;
+  gap: 1rem;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.left .patient-register .patient-info {
+  background-color: #fff;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: transparent;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.patient-info .table .add-records {
+  border: solid;
+  border-color: rgba(0, 122, 100, 0.24);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-records .status-btn {
+  background: transparent;
+  color: #007a64;
+  text-align: center;
+}
+
+.patient-info .table .add-cc {
+  border: transparent;
+  background-color: rgba(143, 140, 255, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-cc .status-btn {
+  background: transparent;
+  color: #2d28ff;
+  text-align: center;
+}
+
+.patient-info .table .not-submitted {
+  border: transparent;
+  background-color: rgba(255, 239, 229, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.not-submitted .status-btn {
+  background: transparent;
+  color: #ff5c01;
+  text-align: center;
+}
+.patient-info .table .approve-request {
+  border: transparent;
+  background-color: #ff4c00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.approve-request .status-btn {
+  background: transparent;
+  color: #fff;
+  text-align: center;
+}
+
+.left .table tbody td {
+  color: #3e4954;
+}
+.left .table-page {
+  align-items: center;
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+  margin-top: 0.3rem;
+}
+
+.left .edit-btn {
+  background: transparent;
+  color: #000;
+}
+
+/* .patient-register .edit-btn:hover {
+  display: inline;
+  color: #000;
+} */
+
+.left .dentist-report {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.left .dentist-report .dentist-info {
+  background-color: #fff;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: transparent;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.dentist-info .table .report-1 {
+  border: solid;
+  border-color: rgba(0, 122, 100, 0.24);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.report-1 .status-btn {
+  background: transparent;
+  color: #007a64;
+  text-align: center;
+}
+
+.dentist-info .table .report-2 {
+  border: solid;
+  border-color: rgba(0, 122, 100, 0.24);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.report-2 .status-btn {
+  background: transparent;
+  color: #2d28ff;
+  text-align: center;
+}
+
+.left .patient-link {
+  text-decoration: underline;
+  background: transparent;
+}
+
+.left .doctor-link button {
+  text-decoration: underline;
+  background: transparent;
+}
+
+.divider .right {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 100%;
+  color: 3e4954;
+}
+
+.right .right-patient-info {
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1rem;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  justify-content: start;
+  display: none;
+}
+
+.right .report-info {
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1rem;
+  align-items: center;
+  justify-content: start;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.right .right-patient-info .actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.right .report-info .actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.actions button {
+  background: transparent;
+}
+
+.actions .accept-btn {
+  border: solid;
+  border-color: #000;
+  padding: 0.5rem;
+  margin-left: 1rem;
+}
+
+.actions .accept-btn i {
+  color: #2d28ff;
+  font-size: 1rem;
+}
+
+.actions .notif-btn {
+  border: solid;
+  border-color: #000;
+  padding: 0.5rem;
+}
+
+.actions .notif-btn i {
+  color: #007a64;
+  font-size: 1rem;
+}
+
+.right .patient-details {
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.right .patient-details img {
+  width: 100%;
+}
+
+.right .dentist-details img {
+  width: 100%;
+}
+
+/* MEDIA QUERY */
+@media screen and (max-width: 768px) {
+  main {
+    width: 100vw;
+  }
+  .page {
+    grid-template-rows: repeat(1, 1fr);
+  }
+  .page .main-content .divider {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin-right: 1rem;
+    align-items: start;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .divider .left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+  }
+  .divider .right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: 3e4954;
+  }
+}

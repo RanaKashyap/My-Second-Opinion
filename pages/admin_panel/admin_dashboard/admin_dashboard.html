@@ -20,6 +20,7 @@
       crossorigin="anonymous"
     ></script>
     <link href="../../../css/styles.css" rel="stylesheet" />
+    <link href="./admin_dashboard.css" rel="stylesheet" />
   </head>
   <body>
     <div class="page">
@@ -119,7 +120,220 @@
             <h3>Admin Dashboard</h3>
           </div>
           <div class="page-content">
-            <h1>MAIN</h1>
+            <div class="divider">
+              <div class="left">
+                <div class="patient-register">
+                  <div class="section-title">Approve Patient Registration</div>
+                  <div class="patient-info">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">Patient ID</th>
+                          <th scope="col">Request</th>
+                          <th scope="col">Registration</th>
+                          <th scope="col"># Days</th>
+                          <th scope="col">Status</th>
+                          <th scope="col" class="edit-item"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td scope="row">
+                            <button class="patient-link">#P-00014</button>
+                          </td>
+                          <td>Dental</td>
+                          <td>26/02/2020</td>
+                          <td>5</td>
+                          <td>
+                            <div class="add-records">
+                              <button class="status-btn">Add Records</button>
+                            </div>
+                          </td>
+                          <td>
+                            <button class="edit-btn">
+                              <i class="fa-regular fa-pen-to-square"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td scope="row">
+                            <button class="patient-link">#P-00014</button>
+                          </td>
+                          <td>Orthodontic</td>
+                          <td>26/02/2020</td>
+                          <td>10</td>
+                          <td>
+                            <div class="add-cc">
+                              <button class="status-btn">Add CC</button>
+                            </div>
+                          </td>
+                          <td>
+                            <button class="edit-btn">
+                              <i class="fa-regular fa-pen-to-square"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td scope="row">
+                            <button class="patient-link">#P-00014</button>
+                          </td>
+                          <td>Dental</td>
+                          <td>26/02/2020</td>
+                          <td>10</td>
+                          <td>
+                            <div class="not-submitted">
+                              <button class="status-btn">Not Submitted</button>
+                            </div>
+                          </td>
+                          <td>
+                            <button class="edit-btn">
+                              <i class="fa-regular fa-pen-to-square"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td scope="row">
+                            <button class="patient-link">#P-00014</button>
+                          </td>
+                          <td>Orthodontic</td>
+                          <td>26/02/2020</td>
+                          <td>10</td>
+                          <td>
+                            <div class="approve-request">
+                              <button class="status-btn">
+                                Approve Request
+                              </button>
+                            </div>
+                          </td>
+                          <td>
+                            <button class="edit-btn">
+                              <i class="fa-regular fa-pen-to-square"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="table-page">Showing 10 from 160 data</div>
+                </div>
+                <div class="dentist-report">
+                  <div class="section-title">Approve Dentist Reports</div>
+                  <div class="dentist-info">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">Patient ID</th>
+                          <th scope="col">Request</th>
+                          <th scope="col">Dentist</th>
+                          <th scope="col">Submitted</th>
+                          <th scope="col">Status</th>
+                          <th scope="col" class="edit-item">
+                            <!-- <i class="fa-regular fa-pen-to-square"></i> -->
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td scope="row">
+                            <button class="patient-link">#P-00014</button>
+                          </td>
+                          <td>Dental</td>
+                          <td>
+                            <button class="doctor-link">Dr John Smith</button>
+                          </td>
+                          <td>12/22/24</td>
+                          <td>
+                            <div class="report-1">
+                              <button class="status-btn">Report #1</button>
+                            </div>
+                          </td>
+                          <td>
+                            <button class="edit-btn">
+                              <i class="fa-regular fa-pen-to-square"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td scope="row">
+                            <button class="patient-link">#P-00014</button>
+                          </td>
+                          <td>Dental</td>
+                          <td>
+                            <button class="doctor-link">Dr John Smith</button>
+                          </td>
+                          <td>12/22/24</td>
+                          <td>
+                            <div class="report-2">
+                              <button class="status-btn">Report #2</button>
+                            </div>
+                          </td>
+                          <td>
+                            <button class="edit-btn">
+                              <i class="fa-regular fa-pen-to-square"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td scope="row"></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>
+                            <div class="approve-request">
+                              <button class="status-btn"></button>
+                            </div>
+                          </td>
+                          <td>
+                            <button class="edit-btn"></button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="table-page">Showing 10 from 160 data</div>
+                </div>
+              </div>
+              <div class="right">
+                <div class="right-patient-info">
+                  <div class="actions">
+                    <div class="accept-btn">
+                      <button>
+                        <i class="fa-solid fa-check"></i>
+                        Accept
+                      </button>
+                    </div>
+                    <div class="notif-btn">
+                      <button>
+                        <i class="fa-regular fa-bell"></i>
+                        Reject & Notification
+                      </button>
+                    </div>
+                  </div>
+                  <div class="patient-details">
+                    <img src="../../../images/patient-info.png" />
+                  </div>
+                </div>
+                <div class="report-info">
+                  <div class="actions">
+                    <div class="accept-btn">
+                      <button>
+                        <i class="fa-solid fa-check"></i>
+                        Accept
+                      </button>
+                    </div>
+                    <div class="notif-btn">
+                      <button>
+                        <i class="fa-regular fa-bell"></i>
+                        Reject & Notification
+                      </button>
+                    </div>
+                  </div>
+                  <div class="dentist-details">
+                    <img src="../../../images/dentist-info.png" />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </main>
@@ -131,5 +345,6 @@
 
     <!-- Custom Script -->
     <script src="../../../js/scripts.js"></script>
+    <script src="./admin_dashboard.js"></script>
   </body>
 </html>

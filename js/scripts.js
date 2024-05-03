@@ -11,7 +11,6 @@ closeBtn.addEventListener('click', () => {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  console.log('DOM content loaded');
   // Handle navigation clicks
   document.querySelectorAll('side .sidebar a').forEach(function (link) {
     link.addEventListener('click', function (event) {
