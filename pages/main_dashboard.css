@@ -1,0 +1,128 @@
+main .page-content .top-insights {
+  background-color: aqua;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* gap: 1rem; */
+}
+
+.top-insights .requests {
+  width: 15rem;
+  /* height: 1rem; */
+  background-color: white;
+  /* border-bottom: 0.3rem solid;
+  border-image: linear-gradient(to right, #bda25c, #ebcb82);
+  border-image-slice: 1; */
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.top-insights .revenue {
+  width: 15rem;
+  /* height: 1rem; */
+  background-color: white;
+  /* border-bottom: 0.3rem solid;
+  border-image: linear-gradient(to right, #bda25c, #ebcb82);
+  border-image-slice: 1; */
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.top-insights .overview {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+}
+.top-insights .labels {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+}
+
+.labels .right {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 0.3rem;
+}
+.labels .divider {
+  height: 5rem;
+  width: 1px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.labels .left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 0.3rem;
+  padding-left: 0.3rem;
+}
+
+.labels .info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 1.5rem;
+}
+
+.labels .color {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0.5rem;
+  height: 100%;
+}
+
+.labels .text {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-size: 0.5rem;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.labels h6 {
+  font-size: 0.5rem;
+}
+
+main .page-content .bottom-insights {
+  background-color: red;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* gap: 1rem; */
+}
+
+.bottom-insights .analytics {
+  width: 10rem;
+  background-color: white;
+  border-bottom: 0.3rem solid;
+  border-image: linear-gradient(to right, #bda25c, #ebcb82);
+  border-image-slice: 1;
+}
+
+.top-insights .bar {
+  height: 0.3rem;
+  background-image: linear-gradient(to right, #bda25c, #ebcb82);
+  margin-top: 1rem;
+}
