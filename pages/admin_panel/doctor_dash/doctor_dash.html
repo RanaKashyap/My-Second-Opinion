@@ -19,6 +19,7 @@
       src="https://kit.fontawesome.com/ccfa6e01df.js"
       crossorigin="anonymous"
     ></script>
+    <link href="./doctor_dash.css" rel="stylesheet" />
     <link href="../../../css/styles.css" rel="stylesheet" />
   </head>
   <body>
@@ -116,7 +117,142 @@
             <h3>Doctor Dashboard</h3>
           </div>
           <div class="page-content">
-            <h1>MAIN</h1>
+            <div class="overview">
+              <div class="card">
+                <div class="text">Prelim. Reports</div>
+                <div class="number">65</div>
+              </div>
+              <div class="card">
+                <div class="text">Accepted</div>
+                <div class="number">65</div>
+              </div>
+              <div class="card">
+                <div class="text">Declined</div>
+                <div class="number">65</div>
+              </div>
+              <div class="card">
+                <div class="text">Delayed</div>
+                <div class="number">65</div>
+              </div>
+              <div class="card">
+                <div class="text">Completed</div>
+                <div class="number">65</div>
+              </div>
+              <div class="card">
+                <div class="text">Sent to Pt.</div>
+                <div class="number">65</div>
+              </div>
+              <div class="card">
+                <div class="text">Opened</div>
+                <div class="number">65</div>
+              </div>
+              <div class="card">
+                <div class="text">Unopened</div>
+                <div class="number">65</div>
+              </div>
+            </div>
+            <div class="table-container">
+              <table id="myTable" class="table">
+                <thead>
+                  <tr>
+                    <th>Dentist</th>
+                    <th>Specialty</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>Member Since</th>
+                    <th>
+                      <div class="col-icon">
+                        Accepted<i class="fa-regular fa-square-check"></i>
+                      </div>
+                    </th>
+                    <th>
+                      <div class="col-icon">
+                        Declined<i class="fa-regular fa-circle-xmark"></i>
+                      </div>
+                    </th>
+                    <th>
+                      <div class="col-icon">
+                        Delayed<i class="fa-regular fa-hourglass"></i>
+                      </div>
+                    </th>
+                    <th>
+                      <div class="col-icon">
+                        Completed<i class="fa-solid fa-file"></i>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr id="row">
+                    <td><button class="dentist-info">Olivia Jean</button></td>
+                    <td>Dentist</td>
+                    <td>jean@gmail.com</td>
+                    <td>534-234-2234</td>
+                    <td>12/12/2023</td>
+                    <td class="status-info">12</td>
+                    <td class="status-info">5</td>
+                    <td class="status-info">0</td>
+                    <td class="status-info">4</td>
+                  </tr>
+                  <tr id="row">
+                    <td><button class="dentist-info">Olivia Jean</button></td>
+                    <td>Orthodontist</td>
+                    <td>jean@gmail.com</td>
+                    <td>534-234-2234</td>
+                    <td>12/12/2023</td>
+                    <td class="status-info">12</td>
+                    <td class="status-info">5</td>
+                    <td class="status-info">0</td>
+                    <td class="status-info">4</td>
+                  </tr>
+                  <tr id="row">
+                    <td><button class="dentist-info">Olivia Jean</button></td>
+                    <td>Dentist</td>
+                    <td>jean@gmail.com</td>
+                    <td>534-234-2234</td>
+                    <td>12/12/2023</td>
+                    <td class="status-info">12</td>
+                    <td class="status-info">5</td>
+                    <td class="status-info">0</td>
+                    <td class="status-info">4</td>
+                  </tr>
+                  <tr id="row">
+                    <td><button class="dentist-info">Olivia Jean</button></td>
+                    <td>Dentist</td>
+                    <td>jean@gmail.com</td>
+                    <td>534-234-2234</td>
+                    <td>12/12/2023</td>
+                    <td class="status-info">12</td>
+                    <td class="status-info">5</td>
+                    <td class="status-info">0</td>
+                    <td class="status-info">4</td>
+                  </tr>
+                  <tr id="row">
+                    <td><button class="dentist-info">Olivia Jean</button></td>
+                    <td>Orthodontist</td>
+                    <td>jean@gmail.com</td>
+                    <td>534-234-2234</td>
+                    <td>12/12/2023</td>
+                    <td class="status-info">12</td>
+                    <td class="status-info">5</td>
+                    <td class="status-info">0</td>
+                    <td class="status-info">4</td>
+                  </tr>
+                  <tr id="row">
+                    <td><button class="dentist-info">Olivia Jean</button></td>
+                    <td>Dentist</td>
+                    <td>jean@gmail.com</td>
+                    <td>534-234-2234</td>
+                    <td>12/12/2023</td>
+                    <td class="status-info">12</td>
+                    <td class="status-info">5</td>
+                    <td class="status-info">0</td>
+                    <td class="status-info">4</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="table-page">Showing 10 from 160 data</div>
+            </div>
           </div>
         </div>
       </main>
