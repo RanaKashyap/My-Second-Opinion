@@ -168,7 +168,7 @@ side .sidebar a:hover {
 /* MAIN  */
 main {
   margin-left: 18vw;
-  height: 100vh;
+  /* height: 100vh; */
   width: 82vw;
   background-color: var(--clr-color-background);
 }
@@ -290,7 +290,9 @@ main .notif-center {
 /* MEDIA QUERY */
 @media screen and (max-width: 768px) {
   body {
-    font-size: 3vw;
+    font-size: 1vw;
+    width: 100vw;
+    background-color: rebeccapurple;
   }
 
   .page {
@@ -343,18 +345,28 @@ main .notif-center {
     margin-right: 30px;
   }
 
+  main {
+    margin-left: 0vw;
+    width: 100vw;
+    background-color: var(--clr-color-background);
+  }
+
   main .top {
-    /* position: fixed; */
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 0 0.8rem;
+    padding-top: 0rem;
+    margin-top: 0rem;
+    position: fixed; /* Fix the navigation bar position */
+    top: 0; /* Place it at the top of the viewport */
+    left: 0; /* Align it to the left edge */
     width: 100%;
     z-index: 2;
-    margin: 0;
-    margin-bottom: 1rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 0.8rem;
+    overflow-x: auto;
+    background-color: var(--clr-color-background);
   }
 
   main .top .menu_bar {
@@ -365,19 +377,60 @@ main .notif-center {
     position: absolute;
     left: 1rem;
     font-size: 2rem;
+    background-color: #fff;
   }
 
-  .main-area .top .search-container {
-    display: none;
+  .main-area .search-container {
+    margin-left: 0rem;
+    height: 0%;
+    background-color: var(--clr-white);
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0rem;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
   }
 
   main .notif-center {
-    grid-template-columns: repeat(1, 1fr);
-    /* display: none; */
+    grid-template-rows: repeat(1, 1fr);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 0.1rem;
+    overflow-x: auto;
   }
 
-  /* main {
+  .notif-center .badge-container {
+    display: flex;
+    flex-direction: row;
+    margin: 0.5rem;
+  }
+
+  .notif-center button {
+    background: none;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 0.2rem;
+    border: solid;
+    border-width: 0.1rem;
+    border-color: var(--clr-active-link);
+    color: var(--clr-active-link);
+  }
+
+  .notif-center span {
+    color: #fff;
+    background-color: var(--clr-active-link);
+    border-radius: 0;
+    height: 50%;
+  }
+
+  main {
     grid-template-columns: repeat(1, 1fr);
-  } */
+  }
   /* https://youtu.be/f51Kd5uHN84?si=-AL7i3AJseSpyj_x */
 }
