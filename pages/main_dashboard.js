@@ -41,3 +41,4 @@ new Chart("revenue-chart", {
     },
   },
 });
+
