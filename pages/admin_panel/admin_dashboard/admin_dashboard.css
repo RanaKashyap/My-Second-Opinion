@@ -298,6 +298,31 @@
   width: 100%;
 }
 
+.container nav {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: end;
+  width: 100%;
+}
+
+.container .pagination .page-link {
+  background-color: #007a64;
+  color: #fff;
+  border-radius: 0px;
+  border: solid #007a64;
+  cursor: pointer;
+}
+
+.container .pagination .nav-page-link {
+  background: transparent;
+  color: #007a64;
+  background-color: white;
+  border-radius: 0px;
+  border: solid #007a64;
+  cursor: pointer;
+}
+
 /* MEDIA QUERY */
 @media screen and (max-width: 768px) {
   main {

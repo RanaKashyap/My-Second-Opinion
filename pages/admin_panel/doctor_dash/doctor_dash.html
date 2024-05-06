@@ -151,7 +151,47 @@
                 <div class="number">65</div>
               </div>
             </div>
-            <div class="table-container">
+            <div class="container">
+              <table id="dataTable" class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Dentist</th>
+                    <th scope="col">Specialty</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Mobile</th>
+                    <th scope="col">Member Since</th>
+                    <th scope="col">
+                      <div class="col-icon">
+                        Accepted<i class="fa-regular fa-square-check"></i>
+                      </div>
+                    </th>
+                    <th scope="col">
+                      <div class="col-icon">
+                        Declined<i class="fa-regular fa-circle-xmark"></i>
+                      </div>
+                    </th>
+                    <th scope="col">
+                      <div class="col-icon">
+                        Delayed<i class="fa-regular fa-hourglass"></i>
+                      </div>
+                    </th>
+                    <th scope="col">
+                      <div class="col-icon">
+                        Completed<i class="fa-solid fa-file"></i>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="dentist-dash-table"></tbody>
+              </table>
+              <nav aria-label="Page navigation">
+                <ul
+                  class="pagination justify-content-end"
+                  id="dentist-dash-pagination"
+                ></ul>
+              </nav>
+            </div>
+            <!-- <div class="table-container">
               <table id="myTable" class="table">
                 <thead>
                   <tr>
@@ -252,7 +292,7 @@
                 </tbody>
               </table>
               <div class="table-page">Showing 10 from 160 data</div>
-            </div>
+            </div> -->
           </div>
         </div>
       </main>
@@ -264,5 +304,6 @@
 
     <!-- Custom Script -->
     <script src="../../../js/scripts.js"></script>
+    <script src="./doctor_dash.js"></script>
   </body>
 </html>

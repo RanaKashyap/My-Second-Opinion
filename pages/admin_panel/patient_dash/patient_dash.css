@@ -6,30 +6,31 @@
   justify-content: start;
 }
 
-.page-content .table-container {
+.page-content .container {
+  display: flex;
+  padding: 1rem;
+  border: transparent;
   display: flex;
   flex-direction: column;
-  justify-self: start;
-  align-items: start;
-  justify-content: start;
-  padding: 0.5rem;
-  margin-right: 2rem;
-  margin-left: 2rem;
-  gap: 0.5rem;
+  border-radius: 1rem;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 90%;
-  min-height: 60vh;
+  width: 100%;
+  /* min-height: 60vh; */
+  max-width: 100%;
+  overflow-y: scroll;
+  overflow: scroll;
+  overflow-x: scroll;
 }
 
 .page-content .actions {
   display: flex;
   width: 100%;
-  align-items: end;
+  align-items: center;
   justify-content: end;
   gap: 1rem;
-  margin: 1rem;
-  margin-right: 10rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
 }
 
 .actions .new-patient {
@@ -38,6 +39,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border: transparent;
   padding: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -64,21 +66,64 @@
   color: #007a64;
 }
 
-.main-content .rows .patient-info {
-  background-color: #007bff; /* Blue background color */
-  color: #fff; /* White text color */
-  border: none; /* Remove border */
-  padding: 5px 10px; /* Add padding */
-  border-radius: 5px; /* Add border radius */
+.main-content .table {
+  overflow-y: scroll;
+  overflow: scroll;
+  overflow-x: scroll;
+}
+.main-content .table tbody td {
+  color: #3e4954;
+  font-size: 0.8rem;
 }
 
-.main-content .rows .profile {
-  width: 20px; /* Adjust the width of the square */
-  height: 20px; /* Adjust the height of the square */
-  background-color: #ccc; /* Gray background color */
+.main-content .table .patient-link {
+  background: transparent;
+  text-decoration: underline;
+  background: transparent;
+  color: #3e4954;
 }
 
-.table-container .pagination {
+.page-content .table-page {
+  align-self: flex-start;
+  align-items: center;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  margin-top: 0.3rem;
+}
+
+.main-content .table .status-btn-gray {
+  background-color: transparent;
+  color: #b1b1b1;
+}
+.main-content .table .status-btn-green {
+  background-color: transparent;
+  color: #007a64;
+}
+
+.table .tx-est-green {
+  text-align: center;
+  background-color: rgba(0, 122, 100, 0.1);
+  color: #007a64;
+}
+
+.table .tx-est-gray {
+  text-align: center;
+  background-color: #fff;
+  border: solid;
+  border-color: #e2e2e2;
+  color: #969ba0;
+}
+
+.main-content .table .profile {
+  width: 1rem;
+  height: 1rem;
+  background-color: #ccc;
+}
+
+.table .menu-table {
+  background: transparent;
+}
+.container .navigation {
   display: flex;
   flex-direction: row;
   align-items: end;
@@ -86,12 +131,78 @@
   width: 100%;
   gap: 1rem;
 }
-.table-container .pagination .btn-primary {
+
+.container nav {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: end;
+  width: 100%;
+}
+
+.container .pagination .page-link {
+  background-color: #007a64;
+  color: #fff;
+  border-radius: 0px;
+  border: solid #007a64;
+  cursor: pointer;
+}
+
+.container .pagination .nav-page-link {
   background: transparent;
   color: #007a64;
   background-color: white;
-  border: 2px solid #007a64;
-  padding: 8px 16px; /* Adjust padding as needed */
-  margin: 0 4px; /* Adjust margin as needed */
+  border-radius: 0px;
+  border: solid #007a64;
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  main .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .page-content .actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    margin: 1rem;
+    width: 100%;
+  }
+
+  .actions .new-patient {
+    margin-right: 1rem;
+    width: 100%;
+    background-color: #007a64;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: transparent;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .new-patient .new-patient-btn {
+    background: transparent;
+    color: #fff;
+  }
+
+  .actions .filter-date {
+    /* height: 2rem; */
+    width: 100%;
+    margin: 1rem;
+    background-color: #fff;
+    border: solid;
+    border-color: #007a64;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
 }

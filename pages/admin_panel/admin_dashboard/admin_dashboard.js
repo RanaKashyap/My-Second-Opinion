@@ -47,12 +47,17 @@ const patient_data = [
   { patient_id: '#P-00015', request: 'Orthodontic', registration: '26/02/2020', num_days: '10', status: 'Add CC' },
   { patient_id: '#P-00018', request: 'Dental', registration: '26/02/2020', num_days: '10', status: 'Not Submitted' },
   { patient_id: '#P-00018', request: 'Dental', registration: '26/02/2020', num_days: '10', status: 'Approve Request' },
+  { patient_id: '#P-00018', request: 'Dental', registration: '26/02/2020', num_days: '10', status: 'Approve Request' },
 
 
 ];
 const dentist_data = [
   { patient_id: '#P-00014', request: 'Dental', dentist: 'Dr John Smith', submitted: '12/22/24', status: 'Report #1' },
   { patient_id: '#P-00014', request: 'Dental', dentist: 'Dr John Smith', submitted: '12/22/24', status: 'Report #2' },
+  { patient_id: '#P-00014', request: 'Dental', dentist: 'Dr John Smith', submitted: '12/22/24', status: 'Report #1' },
+  { patient_id: '#P-00014', request: 'Dental', dentist: 'Dr John Smith', submitted: '12/22/24', status: 'Report #2' },
+  { patient_id: '#P-00014', request: 'Dental', dentist: 'Dr John Smith', submitted: '12/22/24', status: 'Report #1' },
+
 
 ];
 
@@ -91,6 +96,7 @@ function renderPatientPagination() {
 
   const patient_totalPages = Math.ceil(patient_data.length / rowsPerPage);
 
+
   for (let i = 1; i <= patient_totalPages; i++) {
     const pageItem = document.createElement('li');
     pageItem.classList.add('page-item');
@@ -99,7 +105,7 @@ function renderPatientPagination() {
     pageLink.href = '#';
     pageLink.textContent = i;
     pageLink.addEventListener('click', () => {
-      renderTable(i);
+      renderPatientTable(i);
     });
     pageItem.appendChild(pageLink);
     patient_pagination.appendChild(pageItem);
@@ -147,7 +153,7 @@ function renderDentistPagination() {
     pageLink.href = '#';
     pageLink.textContent = i;
     pageLink.addEventListener('click', () => {
-      renderTable(i);
+      renderDentistTable(i);
     });
     pageItem.appendChild(pageLink);
     dentist_pagination.appendChild(pageItem);

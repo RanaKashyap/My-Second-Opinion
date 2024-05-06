@@ -65,9 +65,10 @@ function adjustMainContentMargin() {
   if (window.innerWidth <= 768) {
     // Get the height of the fixed top bar
     const topBarHeight = document.querySelector('main .top').offsetHeight;
-    // console.log(topBarHeight)
+
     // Adjust the margin-top of the .main-content
     document.querySelector('main .main-content').style.marginTop = topBarHeight + 'px';
+
   } else {
     // Reset margin-top if not on mobile
     document.querySelector('.main-content').style.marginTop = '0';
@@ -75,11 +76,11 @@ function adjustMainContentMargin() {
 }
 
 // Call the function initially
-adjustMainContentMargin();
+// adjustMainContentMargin();
 
 // Add event listener for window resize
 window.addEventListener('resize', adjustMainContentMargin);
-
+// document.addEventListener('DOMContentLoaded', adjustMainContentMargin);
 
 // Function to refresh the CSS of the .side element
 function refreshSideStyles() {
@@ -100,6 +101,7 @@ window.addEventListener('resize', function () {
   // Call the function to refresh .side styles on resize
   refreshSideStyles();
 });
+document.addEventListener('DOMContentLoaded', refreshSideStyles());
 
 
 

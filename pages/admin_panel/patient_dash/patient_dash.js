@@ -1,64 +1,118 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const tableBody = document.getElementById('tableBody');
-  const prevPageBtn = document.getElementById('prevPageBtn');
-  const nextPageBtn = document.getElementById('nextPageBtn');
-  const rowsPerPage = 9; // Number of rows to display per page
-  let currentPage = 1; // Current page number
-  let totalRows = 15; // Total number of rows
 
-  // Initial table setup
-  updateTable();
+// Sample data
+const patient_data = [
+  { patient_id: '#P-00014', patient_id_name: 'Tom Jones', dentist: 'Dr. Samantha', request: 'Dental Opinion', tx_estimate: '$12000', dob: '05/23/2000', status: 'Pending Report' },
+  { patient_id: '#P-00014', patient_id_name: 'Tom Jones', dentist: 'Dr. Samantha', request: 'Dental Opinion', tx_estimate: '$12000', dob: '05/23/2000', status: 'Pending Report' },
+  { patient_id: '#P-00014', patient_id_name: 'Tom Jones', dentist: 'Dr. Samantha', request: 'Dental Opinion', tx_estimate: '$12000', dob: '05/23/2000', status: 'Pending Report' },
+  { patient_id: '#P-00014', patient_id_name: 'Tom Jones', dentist: 'Dr. Samantha', request: 'Dental Opinion', tx_estimate: '$12000', dob: '05/23/2000', status: 'Pending Report' },
+  { patient_id: '#P-00014', patient_id_name: 'Tom Jones', dentist: 'Dr. Samantha', request: 'Dental Opinion', tx_estimate: '$12000', dob: '05/23/2000', status: 'Pending Report' },
+  { patient_id: '#P-00014', patient_id_name: 'Tom Jones', dentist: 'Dr. Samantha', request: 'Dental Opinion', tx_estimate: '$12000', dob: '05/23/2000', status: 'Pending Report' },
+  { patient_id: '#P-00014', patient_id_name: 'Tom Jones', dentist: 'Dr. Samantha', request: 'Dental Opinion', tx_estimate: '$12000', dob: '05/23/2000', status: 'Pending Report' },
+  { patient_id: '#P-00014', patient_id_name: 'Tom Jones', dentist: 'Dr. Samantha', request: 'Dental Opinion', tx_estimate: '$12000', dob: '05/23/2000', status: 'Pending Report' },
+  { patient_id: '#P-00014', patient_id_name: 'Tom Jones', dentist: 'Dr. Samantha', request: 'Dental Opinion', tx_estimate: '$12000', dob: '05/23/2000', status: 'Pending Report' },
+  { patient_id: '#P-00014', patient_id_name: 'Tom Jones', dentist: 'Dr. Samantha', request: 'Dental Opinion', tx_estimate: '$12000', dob: '05/23/2000', status: 'Pending Report' },
 
-  function updateTable() {
-    const sampleRows = document.querySelector('.rows table').innerHTML;
-    const startIndex = (currentPage - 1) * rowsPerPage;
-    const endIndex = Math.min(startIndex + rowsPerPage, totalRows);
 
-    let rowsHTML = '';
-    for (let i = startIndex + 1; i <= endIndex; i++) {
-      rowsHTML += sampleRows.replace(/Patient \d+/g, `Patient ${i}`);
+
+];
+
+
+// Constants
+const rowsPerPage = 9;
+
+// Function to render table rows
+function renderPatientTable(page) {
+  const tableBody = document.getElementById('patient-dash-table');
+  tableBody.innerHTML = '';
+
+  const startIndex = (page - 1) * rowsPerPage;
+  const endIndex = Math.min(startIndex + rowsPerPage, patient_data.length);
+
+  for (let i = startIndex; i < endIndex; i++) {
+    const row = document.createElement('tr');
+    // Randomly select class
+    let tx_est_class = Math.random() < 0.5 ? 'tx-est-gray' : 'tx-est-green';
+    // get status
+    let status_btn_class = "";
+    // check status conditional class
+    if (patient_data[i].status === 'Pending Report' || patient_data[i].status === 'Unavailable') {
+      status_btn_class = 'status-btn-gray';
+    } else {
+      status_btn_class = 'status-btn-green'
     }
-    tableBody.innerHTML = rowsHTML;
+    // Add table-row class to the created row
+    row.classList.add('table-row');
+    row.innerHTML = `
+      <td><div class="profile"></div></td>
+      <td><button class="patient-link">${patient_data[i].patient_id}</button></td>
+      <td>${patient_data[i].patient_id_name}</td>
+      <td>${patient_data[i].dentist}</td>
+      <td>${patient_data[i].request}</td>
+      <td ><div class="${tx_est_class}">${patient_data[i].tx_estimate}</div></td>
+      <td>${patient_data[i].dob}</td>
+      <td><button class="${status_btn_class}">${patient_data[i].status}</button></td>
+      <td><button class="menu-table"><i class="fa-solid fa-ellipsis-vertical"></i></button></td>
+    `;
+    tableBody.appendChild(row);
+  }
+}
 
-    // const rows = tableBody.querySelectorAll('tr');
-    // rows.forEach(row => {
-    //   const profileCell = document.createElement('td');
-    //   const profileSquare = document.createElement('div');
-    //   profileSquare.classList.add('profile');
-    //   profileCell.appendChild(profileSquare);
-    //   row.insertBefore(profileCell, row.firstChild);
-    // });
+// Function to render pagination
+function renderPatientPagination() {
+  const patient_pagination = document.getElementById('patient-dash-pagination');
+  patient_pagination.innerHTML = '';
 
+  const patient_totalPages = Math.ceil(patient_data.length / rowsPerPage);
 
-    // Apply styling to buttons after generating rows
-    const patientInfoButtons = tableBody.querySelectorAll('.patient-info');
-    patientInfoButtons.forEach(button => {
-      button.style.backgroundColor = 'transparent';
+  // Previous button
+  const prevPageItem = document.createElement('li');
+  prevPageItem.classList.add('page-item');
+  const prevPageLink = document.createElement('a');
+  prevPageLink.classList.add('page-link');
+  prevPageLink.classList.add('nav-page-link');
+  prevPageLink.href = '#';
+  prevPageLink.textContent = 'Previous';
+  prevPageLink.addEventListener('click', () => {
+    const prevPage = Math.max(currentPage - 1, 1);
+    renderPatientTable(prevPage);
+  });
+  prevPageItem.appendChild(prevPageLink);
+  patient_pagination.appendChild(prevPageItem);
 
+  for (let i = 1; i <= patient_totalPages; i++) {
+    const pageItem = document.createElement('li');
+    pageItem.classList.add('page-item');
+    const pageLink = document.createElement('a');
+    pageLink.classList.add('page-link');
+    pageLink.href = '#';
+    pageLink.textContent = i;
+    pageLink.addEventListener('click', () => {
+      renderPatientTable(i);
     });
-
-    const dentistInfoButtons = tableBody.querySelectorAll('.dentist-info');
-    dentistInfoButtons.forEach(button => {
-      button.style.backgroundColor = 'transparent';
-
-    });
+    pageItem.appendChild(pageLink);
+    patient_pagination.appendChild(pageItem);
   }
 
-  function goToPreviousPage() {
-    if (currentPage > 1) {
-      currentPage--;
-      updateTable();
-    }
-  }
+  // Next button
+  const nextPageItem = document.createElement('li');
+  nextPageItem.classList.add('page-item');
+  const nextPageLink = document.createElement('a');
+  nextPageLink.classList.add('page-link');
+  nextPageLink.classList.add('nav-page-link');
+  nextPageLink.href = '#';
+  nextPageLink.textContent = 'Next';
+  nextPageLink.addEventListener('click', () => {
+    const nextPage = Math.min(currentPage + 1, patient_totalPages);
+    renderPatientTable(nextPage);
+  });
+  nextPageItem.appendChild(nextPageLink);
+  patient_pagination.appendChild(nextPageItem);
+}
 
-  function goToNextPage() {
-    const totalPages = Math.ceil(totalRows / rowsPerPage);
-    if (currentPage < totalPages) {
-      currentPage++;
-      updateTable();
-    }
-  }
-
-  prevPageBtn.addEventListener('click', goToPreviousPage);
-  nextPageBtn.addEventListener('click', goToNextPage);
-});
+// Function to initialize table
+function initPatientTable() {
+  renderPatientTable(1);
+  renderPatientPagination();
+}
+// Initialize table
+initPatientTable();
