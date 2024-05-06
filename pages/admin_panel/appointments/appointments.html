@@ -117,59 +117,30 @@
             <h3>Appointments</h3>
           </div>
           <div class="page-content">
-            <div class="table-container">
-              <table id="patientTable" class="table">
+            <div class="container">
+              <table id="dataTable" class="table">
                 <thead>
                   <tr>
-                    <th>
-                      <!-- column for profile -->
-                    </th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Gender</th>
-                    <th>Date</th>
-                    <th>Time</th>
-                    <th>Mobile</th>
-                    <th>Doctor</th>
-                    <!-- Add more table headings if needed -->
+                    <th scope="col">Patient ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Mobile</th>
+                    <th scope="col">Doctor</th>
                   </tr>
                 </thead>
-                <tbody id="tableBody">
-                  <!-- Table rows will be added dynamically here -->
-                </tbody>
+                <tbody id="appointments-table"></tbody>
               </table>
-              <div class="pagination">
-                <button id="prevPageBtn" class="btn btn-primary">
-                  <i class="fa-solid fa-angles-left"></i>Previous
-                </button>
-                <button id="nextPageBtn" class="btn btn-primary">
-                  Next <i class="fa-solid fa-angles-right"></i>
-                </button>
-              </div>
+              <nav aria-label="Page navigation">
+                <ul
+                  class="pagination justify-content-end"
+                  id="appointments-pagination"
+                ></ul>
+              </nav>
             </div>
-            <!-- ADD ROWS HERE -->
-            <div class="rows" style="display: none">
-              <table>
-                <tr>
-                  <td><button class="patient-info">Ashton Cox</button></td>
-                  <td>test@email.com</td>
-                  <td>Male</td>
-                  <td>02/15/2018</td>
-                  <td>10:18</td>
-                  <td>1234567890</td>
-                  <td><button class="dentist-info">Dr. Rajesh</button></td>
-                </tr>
-                <tr>
-                  <td><button class="patient-info">Airi Satou</button></td>
-                  <td>test@email.com</td>
-                  <td>Female</td>
-                  <td>02/15/2018</td>
-                  <td>10:18</td>
-                  <td>1234567890</td>
-                  <td><button class="dentist-info">Dr. Jay Soni</button></td>
-                </tr>
-              </table>
-            </div>
+            <div class="table-page">Showing 10 from 160</div>
           </div>
         </div>
       </main>

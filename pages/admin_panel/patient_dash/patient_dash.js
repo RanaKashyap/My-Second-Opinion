@@ -18,7 +18,7 @@ const patient_data = [
 
 
 // Constants
-const rowsPerPage = 9;
+const rowsPerPage = 10;
 
 // Function to render table rows
 function renderPatientTable(page) {
@@ -116,3 +116,12 @@ function initPatientTable() {
 }
 // Initialize table
 initPatientTable();
+
+
+// UPDATE LABEL FOR TABLE 
+// Find the length of the dentist_data array
+const totalEntries = patient_data.length;
+
+// Update the text in the .table-page element
+const tablePageElement = document.querySelector('.table-page');
+tablePageElement.textContent = `Showing ${rowsPerPage > totalEntries ? totalEntries : rowsPerPage} from ${totalEntries}`;

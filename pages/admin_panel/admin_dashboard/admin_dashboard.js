@@ -173,3 +173,22 @@ function initDentistTable() {
 // Initialize table
 initPatientTable();
 initDentistTable();
+
+
+
+// UPDATE LABEL FOR TABLE 
+// Find the length of the patient_data array
+const totalEntriespatient = patient_data.length;
+
+// Update the text in the .table-page element
+const tablePageElementPatient = document.querySelector('.table-page.patient');
+tablePageElementPatient.textContent = `Showing ${rowsPerPage > totalEntriespatient ? totalEntriespatient : rowsPerPage} from ${totalEntriespatient}`;
+
+
+// UPDATE LABEL FOR TABLE 
+// Find the length of the dentist_data array
+const totalEntriesDentist = dentist_data.length;
+
+// Update the text in the .table-page element
+const tablePageElementDentist = document.querySelector('.table-page.dentist');
+tablePageElementDentist.textContent = `Showing ${rowsPerPage > totalEntriesDentist ? totalEntriesDentist : rowsPerPage} from ${totalEntriesDentist}`;

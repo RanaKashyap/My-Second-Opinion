@@ -16,7 +16,6 @@
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 100%;
-  /* min-height: 60vh; */
   max-width: 100%;
   overflow-y: scroll;
   overflow: scroll;
@@ -123,6 +122,7 @@
 .table .menu-table {
   background: transparent;
 }
+
 .container .navigation {
   display: flex;
   flex-direction: row;

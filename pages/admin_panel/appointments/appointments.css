@@ -6,79 +6,48 @@
   justify-content: start;
 }
 
-.page-content .table-container {
+.page-content .container {
+  display: flex;
+  padding: 1rem;
+  border: transparent;
   display: flex;
   flex-direction: column;
-  justify-self: start;
-  align-items: start;
-  justify-content: start;
-  padding: 0.5rem;
-  margin-right: 2rem;
-  margin-left: 2rem;
-  gap: 0.5rem;
+  border-radius: 1rem;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 90%;
-  min-height: 60vh;
-}
-
-.page-content .actions {
-  display: flex;
   width: 100%;
-  align-items: end;
-  justify-content: end;
-  gap: 1rem;
-  margin: 1rem;
-  margin-right: 10rem;
+  max-width: 100%;
+  overflow-y: scroll;
+  overflow: scroll;
+  overflow-x: scroll;
 }
 
-.actions .new-patient {
-  height: 2rem;
-  background-color: #007a64;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.main-content .table {
+  overflow-y: scroll;
+  overflow: scroll;
+  overflow-x: scroll;
+}
+.main-content .table tbody td {
+  color: #3e4954;
+  font-size: 0.8rem;
 }
 
-.new-patient .new-patient-btn {
+.main-content .table .patient-link {
   background: transparent;
-  color: #fff;
-}
-
-.actions .filter-date {
-  height: 2rem;
-  background-color: #fff;
-  border: solid;
-  border-color: #007a64;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.filter-date .filter-date-btn {
+  text-decoration: underline;
   background: transparent;
-  color: #007a64;
+  color: #3e4954;
 }
 
-.main-content .rows .patient-info {
-  background-color: #007bff; /* Blue background color */
-  color: #fff; /* White text color */
-  border: none; /* Remove border */
-  padding: 5px 10px; /* Add padding */
-  border-radius: 5px; /* Add border radius */
+.page-content .table-page {
+  align-self: flex-start;
+  align-items: center;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  margin-top: 0.3rem;
 }
 
-.main-content .rows .profile {
-  width: 20px;
-  height: 20px; /* Adjust the height of the square */
-  background-color: #ccc; /* Gray background color */
-}
-
-.table-container .pagination {
+.container .navigation {
   display: flex;
   flex-direction: row;
   align-items: end;
@@ -86,12 +55,28 @@
   width: 100%;
   gap: 1rem;
 }
-.table-container .pagination .btn-primary {
+
+.container nav {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: end;
+  width: 100%;
+}
+
+.container .pagination .page-link {
+  background-color: #007a64;
+  color: #fff;
+  border-radius: 0px;
+  border: solid #007a64;
+  cursor: pointer;
+}
+
+.container .pagination .nav-page-link {
   background: transparent;
   color: #007a64;
   background-color: white;
-  border: 2px solid #007a64;
-  padding: 8px 16px; /* Adjust padding as needed */
-  margin: 0 4px; /* Adjust margin as needed */
+  border-radius: 0px;
+  border: solid #007a64;
   cursor: pointer;
 }
