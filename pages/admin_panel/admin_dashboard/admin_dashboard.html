@@ -122,101 +122,61 @@
                 <div class="patient-register">
                   <div class="section-title">Approve Patient Registration</div>
                   <div class="patient-info">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th scope="col">Patient ID</th>
-                          <th scope="col">Request</th>
-                          <th scope="col">Registration</th>
-                          <th scope="col"># Days</th>
-                          <th scope="col">Status</th>
-                          <th scope="col" class="edit-item"></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td scope="row">
-                            <button class="patient-link">#P-00014</button>
-                          </td>
-                          <td>Dental</td>
-                          <td>26/02/2020</td>
-                          <td>5</td>
-                          <td>
-                            <div class="add-records">
-                              <button class="status-btn">Add Records</button>
-                            </div>
-                          </td>
-                          <td>
-                            <button class="edit-btn">
-                              <i class="fa-regular fa-pen-to-square"></i>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td scope="row">
-                            <button class="patient-link">#P-00014</button>
-                          </td>
-                          <td>Orthodontic</td>
-                          <td>26/02/2020</td>
-                          <td>10</td>
-                          <td>
-                            <div class="add-cc">
-                              <button class="status-btn">Add CC</button>
-                            </div>
-                          </td>
-                          <td>
-                            <button class="edit-btn">
-                              <i class="fa-regular fa-pen-to-square"></i>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td scope="row">
-                            <button class="patient-link">#P-00014</button>
-                          </td>
-                          <td>Dental</td>
-                          <td>26/02/2020</td>
-                          <td>10</td>
-                          <td>
-                            <div class="not-submitted">
-                              <button class="status-btn">Not Submitted</button>
-                            </div>
-                          </td>
-                          <td>
-                            <button class="edit-btn">
-                              <i class="fa-regular fa-pen-to-square"></i>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td scope="row">
-                            <button class="patient-link">#P-00014</button>
-                          </td>
-                          <td>Orthodontic</td>
-                          <td>26/02/2020</td>
-                          <td>10</td>
-                          <td>
-                            <div class="approve-request">
-                              <button class="status-btn">
-                                Approve Request
-                              </button>
-                            </div>
-                          </td>
-                          <td>
-                            <button class="edit-btn">
-                              <i class="fa-regular fa-pen-to-square"></i>
-                            </button>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <div class="container">
+                      <table id="dataTable" class="table">
+                        <thead>
+                          <tr>
+                            <!-- <th scope="col">
+                              <input type="checkbox" id="selectAll" />
+                            </th> -->
+                            <th scope="col">Patient ID</th>
+                            <th scope="col">Request</th>
+                            <th scope="col">Registration</th>
+                            <th scope="col"># Days</th>
+                            <th scope="col">Status</th>
+                            <th scope="col" class="edit-item"></th>
+                          </tr>
+                        </thead>
+                        <tbody id="patient-info-table"></tbody>
+                      </table>
+                      <nav aria-label="Page navigation">
+                        <ul
+                          class="pagination justify-content-end"
+                          id="patient-pagination"
+                        ></ul>
+                      </nav>
+                    </div>
                   </div>
                   <div class="table-page">Showing 10 from 160 data</div>
                 </div>
                 <div class="dentist-report">
                   <div class="section-title">Approve Dentist Reports</div>
                   <div class="dentist-info">
-                    <table class="table">
+                    <div class="container">
+                      <table id="dataTable" class="table">
+                        <thead>
+                          <tr>
+                            <!-- <th scope="col">
+                              <input type="checkbox" id="selectAll" />
+                            </th> -->
+                            <th scope="col">Patient ID</th>
+                            <th scope="col">Request</th>
+                            <th scope="col">Dentist</th>
+                            <th scope="col">Submitted</th>
+                            <th scope="col">Status</th>
+                            <th scope="col" class="edit-item"></th>
+                          </tr>
+                        </thead>
+                        <tbody id="dentist-info-table"></tbody>
+                      </table>
+                      <nav aria-label="Page navigation">
+                        <ul
+                          class="pagination justify-content-end"
+                          id="dentist-pagination"
+                        ></ul>
+                      </nav>
+                    </div>
+                    <!-- <table class="table">
                       <thead>
                         <tr>
                           <th scope="col">Patient ID</th>
@@ -224,9 +184,7 @@
                           <th scope="col">Dentist</th>
                           <th scope="col">Submitted</th>
                           <th scope="col">Status</th>
-                          <th scope="col" class="edit-item">
-                            <!-- <i class="fa-regular fa-pen-to-square"></i> -->
-                          </th>
+                          <th scope="col" class="edit-item"></th>
                         </tr>
                       </thead>
                       <tbody>
@@ -285,7 +243,7 @@
                           </td>
                         </tr>
                       </tbody>
-                    </table>
+                    </table> -->
                   </div>
                   <div class="table-page">Showing 10 from 160 data</div>
                 </div>

@@ -125,7 +125,7 @@ main .page-content .top-insights {
 
 .left i {
   display: flex;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #007a64;
   padding: 1rem;
 }
@@ -237,7 +237,7 @@ main .page-content .bottom-insights {
   margin-bottom: 1rem;
 }
 .section-title h4 {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .section-title i {
@@ -253,7 +253,7 @@ main .page-content .bottom-insights {
   width: 100%;
   gap: 0.3rem;
   height: 10%;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 .legends .color {
@@ -323,7 +323,7 @@ main .page-content .bottom-insights {
   gap: 1rem;
 }
 .stat i {
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 .stat .info {
   display: flex;
@@ -331,7 +331,7 @@ main .page-content .bottom-insights {
   align-items: start;
   text-align: center;
   justify-content: start;
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin-left: 1rem;
   margin-right: 1rem;
 }
@@ -340,7 +340,7 @@ main .page-content .bottom-insights {
 }
 .stat .number {
   color: #3e4954;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .revenue-summary .section {
