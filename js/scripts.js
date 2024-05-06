@@ -16,17 +16,6 @@ function closeMenu() {
   isMenuOpen = false;
 }
 
-// Function to refresh the CSS of the .side element
-function refreshSideStyles() {
-  const sideElement = document.querySelector('.side');
-
-  // Apply the necessary styles to .side
-  sideElement.style.backgroundColor = 'var(--clr-white)';
-  sideElement.style.marginRight = '0.5rem';
-  sideElement.style.boxShadow = '0px 0px 0.3rem 0px rgba(0, 0, 0, 0.1)';
-  // Add more styles as needed
-}
-
 menuBtn.addEventListener('click', () => {
   openMenu();
 });
@@ -76,9 +65,9 @@ function adjustMainContentMargin() {
   if (window.innerWidth <= 768) {
     // Get the height of the fixed top bar
     const topBarHeight = document.querySelector('main .top').offsetHeight;
-
+    // console.log(topBarHeight)
     // Adjust the margin-top of the .main-content
-    document.querySelector('.main-content').style.marginTop = topBarHeight + 'px';
+    document.querySelector('main .main-content').style.marginTop = topBarHeight + 'px';
   } else {
     // Reset margin-top if not on mobile
     document.querySelector('.main-content').style.marginTop = '0';
@@ -92,7 +81,16 @@ adjustMainContentMargin();
 window.addEventListener('resize', adjustMainContentMargin);
 
 
+// Function to refresh the CSS of the .side element
+function refreshSideStyles() {
+  const sideElement = document.querySelector('.side');
 
+  // Apply the necessary styles to .side
+  sideElement.style.backgroundColor = 'var(--clr-white)';
+  sideElement.style.marginRight = '0.5rem';
+  sideElement.style.boxShadow = '0px 0px 0.3rem 0px rgba(0, 0, 0, 0.1)';
+  // Add more styles as needed
+}
 
 // Call the function initially
 refreshSideStyles();

@@ -395,7 +395,6 @@ main .notif-center {
 
   .main-area .search-container {
     margin-left: 0rem;
-    background-color: var(--clr-white);
     padding: 0rem;
     display: flex;
     align-items: center;
@@ -410,7 +409,6 @@ main .notif-center {
   .main-area .searchbar {
     margin-left: 0rem;
     height: 80%;
-    background-color: var(--clr-white);
     padding: 0rem;
     display: flex;
     align-items: center;
@@ -443,7 +441,7 @@ main .notif-center {
     align-items: center;
     justify-content: center;
     gap: 0.1rem;
-    overflow-x: auto;
+    /* overflow-x: auto; */
   }
 
   .notif-center .badge-container {
@@ -471,13 +469,12 @@ main .notif-center {
     height: 50%;
   }
 
-  .main-content {
-    grid-template-columns: repeat(1, 1fr, 1fr);
-    position: relative;
+  main .main-content {
+    /* grid-template-columns: repeat(1, 1fr, 1fr); */
+    /* position: relative; */
     z-index: 1;
-    width: 100vw;
-    background-color: red;
-    /* margin-top: 40%; */
+    width: 100%;
+    margin-top: 100rem;
   }
   /* https://youtu.be/f51Kd5uHN84?si=-AL7i3AJseSpyj_x */
 }

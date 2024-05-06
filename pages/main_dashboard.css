@@ -353,15 +353,74 @@ main .page-content .bottom-insights {
 
 /* MEDIA QUERY */
 @media screen and (max-width: 768px) {
-  /* 
-  main .page-content .top-insights {
+  main {
+    width: 100vw;
+  }
+  .page {
+    grid-template-rows: repeat(1, 1fr);
+  }
+
+  main .main-content {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100vw;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
   }
+
+  .main-content .page-content .top-insights {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .top-insights .requests {
+    width: 80%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .top-insights .revenue {
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .top-insights .reports {
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .top-insights .appointments {
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
   main .page-content .bottom-insights {
     width: 100%;
     display: flex;
@@ -370,5 +429,46 @@ main .page-content .bottom-insights {
     justify-content: center;
     width: 100vw;
     padding-top: 2rem;
-  } */
+    height: auto;
+  }
+
+  .bottom-insights .demographics {
+    width: 80%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    justify-content: start;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100%;
+  }
+  .bottom-insights .top-dentists {
+    width: 80%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100%;
+  }
+  .bottom-insights .revenue-summary {
+    width: 80%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    max-width: 90vw;
+  }
+
+  .revenue-summary .section .cenvas {
+    background-color: red;
+    width: 100%;
+  }
 }
