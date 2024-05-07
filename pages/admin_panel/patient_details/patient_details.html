@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1"
     />
-    <title>Doctor Details</title>
+    <title>Patient Details</title>
     <!-- Bootstrap CSS -->
 
     <link
@@ -115,14 +115,10 @@
         <div class="main-content">
           <div class="page-title-container">
             <div>
-              <h3>Doctor Details</h3>
-              <div class="doc-id-info">
-                <h6>Doctor /</h6>
-                <h6 class="doctor-id">#P-0616</h6>
-              </div>
+              <h3>Patient Details</h3>
             </div>
-            <div class="update-profile">
-              <button class="update-profile-btn">Update Profile</button>
+            <div class="await-report">
+              <button class="await-report-btn">Awaiting Report</button>
             </div>
           </div>
           <div class="page-content">
@@ -170,115 +166,90 @@
                   <div class="info-right">
                     <div class="gender-age">Male, 57 years</div>
                     <div class="dob">DOB: 12/12/68</div>
-                    <div class="member-since">
-                      <i class="fa-regular fa-clock"></i>Join on 21 August 2020,
-                      12:45 AM
-                    </div>
                   </div>
                 </div>
-                <div class="bio">
-                  <div class="title">Biography</div>
-                  <div>
-                    <p class="text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui
-                      officia deserunt mollit anim id est laborum Sed ut
-                      perspiciatis unde omnis iste natus error sit voluptatem
-                      accusantium doloremque laudantium, totam rem aperiam,
-                      eaque ipsa quae ab illo inventore veritatis et quasi
-                      architecto beatae vitae dicta sunt explicabo. Nemo enim
-                      ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-                      fugit, sed quia consequuntur magni dolores eos qui ratione
-                      voluptatem sequi nesciunt. Neque porro quisquam est, qui
-                      dolorem ipsum quia dolor sit amet, consectetur, adipisci
-                      velit, sed quia non numquam eius modi
-                    </p>
-                  </div>
+                <div class="patient-profile-img-container">
+                  <img
+                    class="patient-profile-img"
+                    src="../../../images/patient-info.png"
+                  />
                 </div>
               </div>
               <div class="notifications">
                 <div class="title">Notifications</div>
               </div>
-              <div class="assigned-patients">
-                <div class="title">Assigned Patients</div>
-                <div class="cards">
-                  <div class="appt-card">
-                    <div class="profile"></div>
-                    <div class="info">
-                      <div class="patient-name">Glee Smiley</div>
-                      <div class="details">
-                        <div class="assigned">
-                          <div class="label">Assigned</div>
-                          <div class="value">12/21/24</div>
-                        </div>
-                        <div class="report-due">
-                          <div class="label">Report Due</div>
-                          <div class="value">12/21/24</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="status"><button>View Report</button></div>
-                  </div>
-                  <div class="appt-card">
-                    <div class="profile"></div>
-                    <div class="info">
-                      <div class="patient-name">Glee Smiley</div>
-                      <div class="details">
-                        <div class="assigned">
-                          <div class="label">Assigned</div>
-                          <div class="value">12/21/24</div>
-                        </div>
-                        <div class="report-due">
-                          <div class="label">Report Due</div>
-                          <div class="value">12/21/24</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="status"><button>View Report</button></div>
-                  </div>
-                  <div class="appt-card">
-                    <div class="profile"></div>
-                    <div class="info">
-                      <div class="patient-name">Glee Smiley</div>
-                      <div class="details">
-                        <div class="assigned">
-                          <div class="label">Assigned</div>
-                          <div class="value">12/21/24</div>
-                        </div>
-                        <div class="report-due">
-                          <div class="label">Report Due</div>
-                          <div class="value">12/21/24</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="status"><button>View Report</button></div>
-                  </div>
-                  <div class="appt-card">
-                    <div class="profile"></div>
-                    <div class="info">
-                      <div class="patient-name">Glee Smiley</div>
-                      <div class="details">
-                        <div class="assigned">
-                          <div class="label">Assigned</div>
-                          <div class="value">12/21/24</div>
-                        </div>
-                        <div class="report-due">
-                          <div class="label">Report Due</div>
-                          <div class="value">12/21/24</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="status"><button>View Report</button></div>
-                  </div>
-                </div>
+              <div class="patient-messages">
+                <div class="title">Patient Messages</div>
               </div>
             </div>
             <div class="right">
+              <div class="assigned-dentist">
+                <div class="title">Assigned Dentist</div>
+                <div class="info-card">
+                  <div class="left">
+                    <div class="name">Dr. Elisabeth Moss</div>
+                    <div class="date">12/20/2023</div>
+                  </div>
+                  <div class="right">
+                    <button class="dent-btn">Unassign</button>
+                  </div>
+                </div>
+                <div class="title">Backup Dentist</div>
+                <div class="info-card">
+                  <div class="left">
+                    <div class="name">Dr. Ted Sherman</div>
+                  </div>
+                  <div class="right">
+                    <button class="dent-btn">Assign</button>
+                  </div>
+                </div>
+              </div>
+              <div class="more-details">
+                <div class="title">History</div>
+                <div class="history">
+                  <div class="registration">
+                    <div class="label">Registration</div>
+                    <div class="date">12/21/2024</div>
+                  </div>
+                  <div class="submitted">
+                    <div class="label">Submitted</div>
+                    <div class="date">12/21/2024</div>
+                  </div>
+                  <div class="report-recieved">
+                    <div class="label">Report Received</div>
+                    <div class="date">12/21/2024</div>
+                  </div>
+                </div>
+                <div class="title">Add-On's</div>
+                <div class="addons">
+                  <div class="hr-rush">
+                    <div class="label">Registration</div>
+                    <div class="date">12/21/2024</div>
+                    <div class="cost">$149</div>
+                  </div>
+                </div>
+                <div class="title">
+                  Treatment Cost:
+                  <div class="cost">$15365.66</div>
+                </div>
+                <div class="treatment-cost">
+                  <div class="cost-info">
+                    <div class="value">$4500</div>
+                    <div class="date">12/21/2024</div>
+                    <div class="cost">$149</div>
+                  </div>
+                  <div class="cost-info">
+                    <div class="value">$4500</div>
+                    <div class="date">12/21/2024</div>
+                    <div class="cost">$149</div>
+                  </div>
+                  <div class="cost-info">
+                    <div class="value">$4500</div>
+                    <div class="date">12/21/2024</div>
+                    <div class="cost">$149</div>
+                  </div>
+                </div>
+              </div>
               <div class="appointments">
                 <div class="title">Appointments</div>
                 <div class="right-appt-card">
@@ -297,7 +268,10 @@
                       </button>
                     </div>
                   </div>
-                  <div class="name">James Hold</div>
+                  <div class="name">
+                    <i class="fa-solid fa-user"></i>
+                    <div>James Hold</div>
+                  </div>
                 </div>
                 <div class="right-appt-card">
                   <div class="date">Wednesday, June 3th</div>
@@ -334,40 +308,6 @@
                     </div>
                   </div>
                   <div class="name">James Hold</div>
-                </div>
-              </div>
-              <div class="payments">
-                <div class="title">
-                  Payments
-                  <div class="icon">
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
-                  </div>
-                </div>
-                <div class="card-container">
-                  <div class="payment-card">
-                    <div class="profile"></div>
-                    <div class="details">
-                      <div class="name">Samuel Hawkins</div>
-                      <div class="tx-cost">Tx Cost: $3634</div>
-                      <div class="fee">Fee: $400</div>
-                    </div>
-                  </div>
-                  <div class="payment-card">
-                    <div class="profile"></div>
-                    <div class="details">
-                      <div class="name">Samuel Hawkins</div>
-                      <div class="tx-cost">Tx Cost: $3634</div>
-                      <div class="fee">Fee: $400</div>
-                    </div>
-                  </div>
-                  <div class="payment-card">
-                    <div class="profile"></div>
-                    <div class="details">
-                      <div class="name">Samuel Hawkins</div>
-                      <div class="tx-cost">Tx Cost: $3634</div>
-                      <div class="fee">Fee: $400</div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
