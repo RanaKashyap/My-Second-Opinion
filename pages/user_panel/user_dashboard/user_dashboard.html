@@ -26,7 +26,7 @@
   <body>
     <div class="page">
       <!-- Side Nav -->
-      <side class="side" id="side_bar">
+      <side class="left-side" id="side_bar">
         <!-- top of side nav bar -->
         <div class="top">
           <a href="./main_dashboard.html">
@@ -42,28 +42,29 @@
         <div class="sidebar">
           <a href="./admin_dashboard/admin_dashboard.html" class="active">
             <i class="fa-solid fa-house-medical"></i>
-            <h3 class="nav-link">Admin Dashboard</h3>
+            <div class="nav-link">Dashboard</div>
           </a>
           <a href="./patient_dash/patient_dash.html" class="nav-item">
             <i class="fa-solid fa-calendar-days"></i>
-            <h3 class="nav-link">Patient Dashboard</h3>
+            <div class="nav-link">My Profile</div>
           </a>
           <a href="./doctor_dash/doctor_dash.html" class="nav-item">
             <i class="fa-solid fa-stethoscope"></i>
-            <h3 class="nav-link">Doctor Dashboard</h3>
+            <div class="nav-link">Dental Records</div>
           </a>
-          <a href="./appointments/appointments.html" class="nav-item">
+          <a href="../notifications/" class="nav-item">
             <i class="fa-solid fa-comments"></i>
-            <h3 class="nav-link">Appointments</h3>
+            <div class="nav-link">Notifications</div>
           </a>
-          <a href="./billing/billing.html" class="nav-item">
-            <i class="fa-regular fa-heart"></i>
-            <h3 class="nav-link">Billing</h3>
+          <a href="../settings.html" class="nav-item">
+            <i class="fa-solid fa-gear"></i>
+            <div class="nav-link">Settings</div>
           </a>
-          <a href="./logout_page.html" class="nav-item">
+          <a href="../logout_page.html" class="nav-item">
             <i class="fa-solid fa-power-off"></i>
-            <h3 class="nav-link">Logout</h3>
+            <div class="nav-link">Logout</div>
           </a>
+          <img src="../../../images/mobile-kickstart.png" />
         </div>
       </side>
 
@@ -74,58 +75,12 @@
           <button class="menu_bar" id="menu_bar">
             <i class="fa-solid fa-bars"></i>
           </button>
-          <div class="search-container">
-            <div class="searchbar">
-              <input
-                class="search-input"
-                type="text"
-                id="searchInput"
-                placeholder="Search..."
-              />
-              <button class="search-button">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
-            </div>
-          </div>
-          <div class="notif-center">
-            <div class="badge-container">
-              <button class="notif-icon">
-                <i class="fa-solid fa-bell"></i>
-              </button>
-              <span class="badge">3</span>
-            </div>
-            <div class="badge-container">
-              <button class="notif-icon">
-                <i class="fa-solid fa-message"></i>
-              </button>
-              <span class="badge">3</span>
-            </div>
-            <div class="badge-container">
-              <button class="notif-icon">
-                <i class="fa-solid fa-gift"></i>
-              </button>
-              <span class="badge">2</span>
-            </div>
-            <div class="badge-container">
-              <button class="profile-icon">
-                <i class="fa-solid fa-user"></i>
-              </button>
-            </div>
-          </div>
         </div>
         <div class="main-content">
           <div class="page-title-container">
             <h3>Dashboard</h3>
           </div>
-          <div
-            class="page-content"
-            style="
-              display: flex;
-              align-items: center;
-              flex-direction: column;
-              justify-content: center;
-            "
-          ></div>
+          <div class="page-content"></div>
         </div>
       </main>
     </div>
