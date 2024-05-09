@@ -20,7 +20,6 @@
   list-style: none;
   appearance: none;
   transition: opacity 0.3s ease-in-out;
-  background-color: #fff;
 }
 
 body {
@@ -52,7 +51,7 @@ side .top {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 2vh;
 }
 
 side .logo {
@@ -74,11 +73,13 @@ side .top div.close {
 
 side .sidebar {
   display: flex;
-  margin-left: 0.5rem;
+  /* margin-left: 10%; */
   flex-direction: column;
   position: relative;
   margin-top: auto;
-  top: 10vh;
+  top: 3vh;
+  align-items: center;
+  justify-content: center;
   border-right-width: 1px;
   border-right-style: solid;
   border-right-color: #d7d7d7;
@@ -87,18 +88,19 @@ side .sidebar {
 
 side .sidebar a {
   display: flex;
-  align-items: center;
+  justify-content: start;
   color: var(--clr-inactive-link);
-  padding-left: 0.5rem;
+  padding-left: 1rem;
   gap: 1rem;
   height: 3.2rem;
+  width: 100%;
   transition: all 0.1s ease;
   text-decoration: none;
   overflow: hidden;
 }
 
 side .sidebar a i {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -117,7 +119,11 @@ side .sidebar .nav-link {
   transition: all 0.1s ease-in;
 }
 
-side .sidebar a:hover:last-child {
+side .sidebar a:hover {
+  color: var(--clr-active-link);
+}
+
+side .sidebar .logout:hover {
   color: red;
 }
 
@@ -126,15 +132,15 @@ side .sidebar a.active {
   margin-left: 0;
 }
 
-side .sidebar a:hover {
-  color: var(--clr-active-link);
+side .sidebar .mobile-kickstart {
+  width: 100%;
+  /* justify-content: space-around; */
 }
 
 /* MAIN  */
 main {
   margin-left: 17vw;
-  width: 82vw;
-  background-color: #fff;
+  width: 83vw;
 }
 
 main .top {
@@ -146,20 +152,11 @@ main .top {
   margin-bottom: 1vw;
 }
 
-main .top .menu_bar {
+main .menu_bar {
   display: none;
 }
 
 /* MAIN SECTION */
-
-main .main-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  width: 100%;
-}
 
 .page-title-container h3 {
   font-size: 1.5rem;
@@ -168,11 +165,10 @@ main .main-content {
 /* MEDIA QUERY */
 @media screen and (max-width: 768px) {
   body {
-    font-size: 0.7rem;
     width: 100vw;
   }
 
-  .side {
+  side {
     position: fixed;
     width: 18rem;
     z-index: 3;
@@ -195,11 +191,14 @@ main .main-content {
     height: auto;
     max-width: 100px;
   }
-  .side .logo img {
+  side .logo img {
     width: 100%;
   }
 
-  .side .sidebar a {
+  side .sidebar {
+    border: transparent;
+  }
+  side .sidebar a {
     width: 100%;
     height: auto;
     padding: 0.5rem;
@@ -222,31 +221,17 @@ main .main-content {
     margin-right: 30px;
   }
 
+  side .mobile-kickstart {
+    display: none;
+  }
+
   main {
     margin-left: 0vw;
     width: 100vw;
-    background-color: #fff;
+    /* background-color: #fff; */
   }
 
-  main .top {
-    padding-top: 0rem;
-    margin-top: 0rem;
-    position: fixed; /* Fix the navigation bar position */
-    top: 0; /* Place it at the top of the viewport */
-    left: 0; /* Align it to the left edge */
-    width: 100%;
-    z-index: 2;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0 0 0.8rem;
-    overflow-x: auto;
-    /* height: 40%; */
-  }
-
-  main .top .menu_bar {
+  main .menu_bar {
     display: inline-block;
     background: transparent;
     top: 0;
@@ -255,20 +240,6 @@ main .main-content {
     position: absolute;
     left: 1rem;
     font-size: 2rem;
-    background-color: #fff;
-  }
-
-  main .main-content {
-    /* grid-template-columns: repeat(1, 1fr, 1fr); */
-    /* position: relative; */
     z-index: 1;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-left: 0rem;
-    margin-right: 0rem;
-    margin-top: 130px;
   }
 }
