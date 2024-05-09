@@ -59,11 +59,46 @@ main .page-content {
   margin: 0 auto 10px;
 }
 
+.main-content .sub-title {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.sub-title .blue-text {
+  color: blue;
+  font-weight: bold;
+}
+.sub-title i {
+  color: #ff0000;
+}
+
+.main-content .section {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.section .tips {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.section .upload {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+}
+
 /* MEDIA QUERY */
 @media screen and (max-width: 768px) {
   main .main-content {
     width: 100%;
     margin: 0rem;
+    padding: 1rem;
   }
 
   main .page-content {
@@ -92,5 +127,9 @@ main .page-content {
     color: #fec322;
     font-size: 1rem;
     margin: 0 auto 10px;
+  }
+
+  .progress-line {
+    display: none;
   }
 }

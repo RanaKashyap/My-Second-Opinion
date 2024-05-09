@@ -29,6 +29,7 @@ body {
   font-size: 0.8rem;
   user-select: none;
   overflow-x: hidden;
+  background-color: var(--clr-color-background);
 }
 
 .page {
@@ -45,6 +46,7 @@ side {
   left: 0;
   width: 17vw;
   height: 100vh;
+  background-color: #fff;
 }
 
 side .top {

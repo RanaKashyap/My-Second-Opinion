@@ -1,9 +1,13 @@
+body {
+  background-color: #fff;
+}
+
 main .main-content {
-  width: 100%;
-  margin: 1rem;
+  width: auto;
 }
 
 main .page-content {
+  margin: 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -64,9 +68,11 @@ main .page-content {
   main .main-content {
     width: 100%;
     margin: 0rem;
+    padding: 1rem;
   }
 
   main .page-content {
+    margin: 0rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -92,5 +98,9 @@ main .page-content {
     color: #fec322;
     font-size: 1rem;
     margin: 0 auto 10px;
+  }
+
+  .progress-line {
+    display: none;
   }
 }

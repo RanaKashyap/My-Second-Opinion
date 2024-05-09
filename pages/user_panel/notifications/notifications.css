@@ -1,5 +1,4 @@
 main .main-content {
-  width: 100%;
   margin: 1rem;
 }
 
@@ -59,11 +58,71 @@ main .page-content {
   margin: 0 auto 10px;
 }
 
+.page-content .notif-card {
+  background-color: #fff;
+  padding: 2rem;
+  border: solid;
+  border-color: #d9d7d8;
+  border-radius: 2rem;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+.notif-card .time-details {
+  display: flex;
+  flex-direction: row;
+  color: #7d7d7d;
+  border-bottom: solid;
+  padding-bottom: 1rem;
+  border-color: rgba(221, 153, 221, 0.46);
+}
+
+.notif-card .time-details .time {
+  margin-left: 1rem;
+  margin-right: 0.2rem;
+  font-size: 0.8rem;
+}
+
+.notif-card .message {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+.message .msg-title {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.message .msg-body {
+  color: #515151;
+  font-size: 0.88rem;
+}
+
+.notif-card .messenger {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+
+.notif-card .messenger .name {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.notif-card .messenger .dept {
+  color: #515151;
+  font-size: 0.88rem;
+}
+
 /* MEDIA QUERY */
 @media screen and (max-width: 768px) {
   main .main-content {
     width: 100%;
     margin: 0rem;
+    padding: 1rem;
   }
 
   main .page-content {
@@ -92,5 +151,9 @@ main .page-content {
     color: #fec322;
     font-size: 1rem;
     margin: 0 auto 10px;
+  }
+
+  .progress-line {
+    display: none;
   }
 }
