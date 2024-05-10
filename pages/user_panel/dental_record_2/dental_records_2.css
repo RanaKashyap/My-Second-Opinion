@@ -79,6 +79,7 @@ main .page-content {
   padding-top: 2rem;
   display: flex;
   flex-direction: row;
+  align-items: start;
   gap: 1rem;
 }
 
@@ -171,9 +172,10 @@ main .page-content {
   color: #fff;
 }
 
-.section .upload {
+.section .form {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: start;
   padding: 1rem;
   background-color: #fff;
   border: solid;
@@ -182,16 +184,113 @@ main .page-content {
   width: 70%;
 }
 
-.section .xray-upload {
-  display: flex;
-  flex-direction: column;
-  width: 23%;
+.form .instructions {
+  font-size: 0.7rem;
 }
 
-.section .smiley-upload {
+.form .label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form .form-section {
+  width: 100%;
+  display: grid;
+  font-size: 0.8rem;
+  grid-template-columns: repeat(2, 1fr);
+  color: #8f8f8f;
+}
+
+.form .form-section input {
+  margin: 0.5rem;
+  border-radius: 0.4rem;
+  min-height: 2rem;
+  font-size: 0.88rem;
+  border: solid;
+  border-color: #d9dee2;
+  color: #000;
+  background: transparent;
+  padding-left: 0.3rem;
+}
+
+.form .form-section input::placeholder {
+  color: #8f8f8f;
+}
+
+.form .gender-selector {
+  color: #8f8f8f;
   display: flex;
-  flex-direction: column;
-  width: auto;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row;
+}
+
+.form .gender-selector label {
+  color: #8f8f8f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.form-section .name-select {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  font-size: 0.88rem;
+}
+
+.name-select .title-selector {
+  margin: 0.5rem;
+  border: solid;
+  border-color: #d9dee2;
+  color: #000;
+  background: transparent;
+  border-radius: 0.4rem;
+  height: 100%;
+}
+
+.title-selector select {
+  font-size: 0rem;
+  color: #8f8f8f;
+}
+
+.name-select .text-input {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.4rem;
+  border: solid;
+  border-color: #d9dee2;
+  color: #000;
+  background: transparent;
+}
+
+.form .auth {
+  background-color: #f4f7fe;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.auth .title {
+  font-weight: bold;
+  font-size: 0.9rem;
+  width: 100%;
+  text-align: center;
+}
+
+.auth .text {
+  font-size: 0.7rem;
+}
+
+.auth .bold {
+  font-size: 0.7rem;
+  font-weight: bold;
 }
 
 /* MEDIA QUERY */
@@ -232,5 +331,26 @@ main .page-content {
 
   .progress-line {
     display: none;
+  }
+
+  .main-content .sub-title {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .main-content .section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .section .left {
+    width: 100%;
+  }
+
+  .section .right {
+    flex-direction: column;
+    width: 100%;
   }
 }
