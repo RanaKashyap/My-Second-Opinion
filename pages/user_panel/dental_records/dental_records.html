@@ -40,7 +40,7 @@
         </div>
 
         <div class="sidebar">
-          <a href="../user_dashboard/user_dashboard.html" class="active">
+          <a href="../user_dashboard/user_dashboard.html" class="nav-item">
             <i class="fa-solid fa-house-medical"></i>
             <div class="nav-link">Dashboard</div>
           </a>
@@ -48,7 +48,7 @@
             <i class="fa-solid fa-calendar-days"></i>
             <div class="nav-link">My Profile</div>
           </a>
-          <a href="./dental_records.html" class="nav-item">
+          <a href="./dental_records.html" class="active">
             <i class="fa-solid fa-stethoscope"></i>
             <div class="nav-link">Dental Records</div>
           </a>
@@ -154,7 +154,11 @@
                   </div>
                 </div>
               </div>
-              <div class="continue-btn">Continue</div>
+              <div class="btn-container">
+                <button class="continue-btn">
+                  <div>Continue</div>
+                </button>
+              </div>
             </div>
             <div class="upload right">
               <div class="xray-upload">
@@ -162,9 +166,21 @@
                   X-Rays Series<i class="fa-solid fa-asterisk"></i>
                 </div>
                 <div class="cards">
-                  <div class="xray-card blue"></div>
-                  <div class="xray-card green"></div>
-                  <div class="xray-card yellow"></div>
+                  <div class="xray-card blue">
+                    <div class="photo">
+                      <img src="../../../images/teeth-images/xray-1.png" />
+                    </div>
+                  </div>
+                  <div class="xray-card green">
+                    <div class="photo">
+                      <img src="../../../images/teeth-images/xray-2.png" />
+                    </div>
+                  </div>
+                  <div class="xray-card yellow">
+                    <div class="photo">
+                      <img src="../../../images/teeth-images/xray-3.png" />
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="smiley-upload">
@@ -172,18 +188,104 @@
                   Smiley Photos<i class="fa-solid fa-asterisk"></i>
                 </div>
                 <div class="cards">
-                  <div class="upload-mobile"></div>
-                  <div class="smiley-card">
-                    <div class="photo"></div>
+                  <div class="upload-mobile">
+                    <button class="mobile-btn">
+                      <div class="mobile-icon">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                      </div>
+                      <div class="label-mobile">Upload From Mobile</div>
+                      <div class="text">
+                        By sending this text to your mobile phone you will have
+                        the ability to take a photo from your device
+                      </div>
+                    </button>
                   </div>
-                  <div class="smiley-card"></div>
-                  <div class="smiley-card"></div>
-                  <div class="additional-photos"></div>
-                </div>
+                  <div class="smiley-card">
+                    <div class="photo">
+                      <img
+                        src="../../../images/teeth-images/upper-teeth-1.png"
+                      />
+                    </div>
+                    <div class="text">Upper Teeth</div>
+                  </div>
+                  <div class="smiley-card">
+                    <div class="photo">
+                      <img
+                        src="../../../images/teeth-images/upper-teeth-2.png"
+                      />
+                    </div>
+                    <div class="text">Upper Teeth</div>
+                  </div>
+                  <div class="smiley-card">
+                    <div class="photo">
+                      <img
+                        src="../../../images/teeth-images/upper-teeth-3.png"
+                      />
+                    </div>
+                    <div class="text">Upper Teeth</div>
+                  </div>
+                  <div class="smiley-card">
+                    <div class="photo">
+                      <img
+                        src="../../../images/teeth-images/upper-teeth-4.png"
+                      />
+                    </div>
+                    <div class="text">Upper Teeth</div>
+                  </div>
+                  <div class="smiley-card">
+                    <div class="photo">
+                      <img
+                        src="../../../images/teeth-images/upper-teeth-5.png"
+                      />
+                    </div>
+                    <div class="text">Upper Teeth</div>
+                  </div>
+                  <div class="smiley-card">
+                    <div class="photo">
+                      <img
+                        src="../../../images/teeth-images/upper-teeth-6.png"
+                      />
+                    </div>
+                    <div class="text">Upper Teeth</div>
+                  </div>
+                  <div class="smiley-card">
+                    <div class="photo">
+                      <img
+                        src="../../../images/teeth-images/upper-teeth-7.png"
+                      />
+                    </div>
+                    <div class="text">Upper Teeth</div>
+                  </div>
+
+                  <div class="additional-photos smiley-card">
+                    <button class="file-btn" >
+                      <div class="file-icon">
+                        <i class="fa-solid fa-upload"></i>
+                      </div>
+                      <div class="label-file">Upload a file</div>
+                      <div class="text-file">Drag and drop file here</div>
+                    </button>
+                    <div class="text">Additional photos</div>
+                  </div>
+                </div>          
               </div>
             </div>
           </div>
-          <div class="stored-data"></div>
+          <div>
+          <div class="stored-data">
+            <table id="data-table">
+              <thead class="purple-bg">
+                <tr>
+                  <th ></th>
+                  <th>File Name</th>
+                  <th>Document Type</th>
+                  <th>Upload Date</th>
+                  <th>Download</th>
+                </tr>
+              </thead>
+              <tbody id="data-table-body"></tbody>
+            </table>
+          </div>
         </div>
       </main>
     </div>
