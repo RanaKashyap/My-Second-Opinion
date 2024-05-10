@@ -108,12 +108,99 @@
               </div>
             </div>
             <div class="page-title-container">
-              <h3>Dashboard</h3>
+              <div class="user-welcome">Hello, Sara</div>
+            </div>
+            <div class="action-cards">
+              <div class="action-card purple">
+                <div class="card-icon">
+                  <i class="fa-solid fa-tooth"></i>
+                </div>
+                <div class="card-title">Request a Dental</div>
+                <div class="start">
+                  <div class="text">Get Started</div>
+                  <button class="arrow">
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="action-card blue">
+                <div class="card-icon">
+                  <i class="fa-solid fa-tooth"></i>
+                </div>
+                <div class="card-title">Request a Dental</div>
+                <div class="start">
+                  <div class="text">Get Started</div>
+                  <button class="arrow">
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="action-card orange">
+                <div class="card-icon">
+                  <i class="fa-solid fa-tooth"></i>
+                </div>
+                <div class="card-title">Request a Dental</div>
+                <div class="start">
+                  <div class="text">Get Started</div>
+                  <button class="arrow">
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="request-section">
+              <div class="title">My Request</div>
+              <table class="request-table">
+                <thead>
+                  <tr>
+                    <th>Service</th>
+                    <th>Date Initiated</th>
+                    <th>Status</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody class="request-body" id="request-table-body">
+                  <!-- Table body will be populated dynamically -->
+                </tbody>
+              </table>
             </div>
           </div>
-          <div class="appointments"></div>
         </div>
       </main>
+
+      <right class="appointments right">
+        <div class="title">Book an Appointment</div>
+        <div id="calendar" class="calendar">
+          <div class="header">
+            <div class="monthYear" id="monthYear"></div>
+            <div class="nav">
+              <button class="prevBtn" id="prevBtn">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <button class="nextBtn" id="nextBtn">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="days">
+            <div class="day">MON</div>
+            <div class="day">TUE</div>
+            <div class="day">WED</div>
+            <div class="day">THU</div>
+            <div class="day">FRI</div>
+            <div class="day">SAT</div>
+            <div class="day">SUN</div>
+          </div>
+          <div class="dates" id="dates"></div>
+        </div>
+        <div class="select-time">
+          <label for="time">Select Time:</label>
+          <select id="time"></select>
+        </div>
+        <button class="continue">Continue</button>
+        <div class="title">Appointment Times</div>
+      </right>
     </div>
 
     <!-- Bootstrap JS and dependencies -->

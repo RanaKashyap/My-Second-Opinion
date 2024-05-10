@@ -228,6 +228,7 @@ main .menu_bar {
 
   main {
     margin-left: 0vw;
+    margin: 0rem;
     width: 100vw;
     /* background-color: #fff; */
   }
