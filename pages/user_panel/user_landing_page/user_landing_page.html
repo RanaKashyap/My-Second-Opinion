@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1"
     />
-    <title>Dashboard</title>
+    <title>Landing Page</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <!-- Bootstrap CSS -->
 
@@ -108,15 +108,39 @@
               </div>
             </div>
             <div class="page-title-container">
-              <h3>Dashboard</h3>
+              <div>Second Opinions</div>
+            </div>
+            <div class="overview">
+              <div class="card">
+                <div class="text">Accepted</div>
+                <div class="number">65</div>
+              </div>
+
+              <div class="card">
+                <div class="text">Declined</div>
+                <div class="number">65</div>
+              </div>
+              <div class="card">
+                <div class="text">Total Revenue</div>
+                <div class="number">65</div>
+              </div>
+              <div class="card">
+                <div class="text">Pending Reports</div>
+                <div class="number">65</div>
+              </div>
+              <div class="card">
+                <div class="text">Completed Reports</div>
+                <div class="number">65</div>
+              </div>
             </div>
             <div class="request-section">
               <div class="title">My Request</div>
               <table class="request-table">
                 <thead>
                   <tr>
-                    <th>Service</th>
-                    <th>Date Initiated</th>
+                    <th>Patient ID</th>
+                    <th>Request Date</th>
+                    <th>Deadline</th>
                     <th>Status</th>
                     <th></th>
                   </tr>
@@ -130,7 +154,23 @@
         </div>
       </main>
 
-      <right class="appointments right">asf</right>
+      <right class="appointments right">
+        <div class="title">Scheduled Appointments</div>
+        <div class="appt-section">
+          <div class="appt-card">
+            <div class="reason">Reevaluation</div>
+            <div class="name">Carol Felderman</div>
+            <div class="phone">463-453-4434</div>
+            <div class="details">
+              <div class="time-saved">
+                <div class="date">June 14</div>
+                <div class="time">10:30 a.m.</div>
+              </div>
+              <button class="report">View Report</button>
+            </div>
+          </div>
+        </div>
+      </right>
     </div>
 
     <!-- Bootstrap JS and dependencies -->
