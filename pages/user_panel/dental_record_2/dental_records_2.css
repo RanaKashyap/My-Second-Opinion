@@ -174,14 +174,12 @@ main .page-content {
 .section .upload {
   display: flex;
   flex-direction: row;
-  justify-content: start;
   padding: 1rem;
   background-color: #fff;
   border: solid;
   border-color: #d9d7d8;
   border-radius: 1rem;
   width: 70%;
-  gap: 2rem;
 }
 
 .section .xray-upload {
@@ -193,35 +191,7 @@ main .page-content {
 .section .smiley-upload {
   display: flex;
   flex-direction: column;
-  width: 80%;
-}
-
-.upload .label {
-  margin-bottom: 10px;
-}
-
-.smiley-upload .cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.3rem;
-}
-.xray-upload .cards {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 0.3rem;
-}
-
-.xray-card,
-.upload-mobile,
-.smiley-card,
-.additional-photos {
-  width: 100%;
-  height: 10rem;
-  background-color: #fff;
-  margin-bottom: 10px;
-  border-radius: 1rem;
-  border: solid;
-  border-color: #c0c0c0;
+  width: auto;
 }
 
 /* MEDIA QUERY */
