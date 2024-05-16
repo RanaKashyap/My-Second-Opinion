@@ -68,7 +68,8 @@ main .page-content {
   width: 100%;
   border: solid;
   border-color: #d9d7d8;
-  border-radius: 2rem;
+  border-radius: 1rem;
+  border-width: 0.1rem;
   padding: 1rem;
   display: flex;
   flex-direction: row;
@@ -119,7 +120,7 @@ main .page-content {
   font-weight: bold;
 }
 
-.section .right .answer {
+.section .right .answer-section {
   color: #7d7d7d;
 }
 
